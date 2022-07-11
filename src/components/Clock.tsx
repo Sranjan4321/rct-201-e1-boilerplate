@@ -11,7 +11,7 @@ export type Props = {
   seconds: number;
 };
 
-const Clock = (props: any) => {
+const Clock = (props: Props) => {
   return (
     <div data-testid="clock">
       <h4 data-testid="clock-label">{/* Label */}</h4>

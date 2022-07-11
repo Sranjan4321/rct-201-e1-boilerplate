@@ -7,22 +7,14 @@ import useClock from './hooks/useClock';
 import { Props } from './components/Clock';
 import useNumberList from './hooks/useNumberList';
 function App() {
-  const { list, appendStart, appendEnd, popStart, popEnd, clear, reset } =
-    useNumberList([]);
+  let initialvalue: number[] = [1, 2, 3];
   let date = new Date();
+
   const { hours, minutes, seconds } = useClock(date);
   return (
     <div className="App">
       <Clock hours={hours} minutes={minutes} seconds={seconds} />
-      <List1
-        list={list}
-        appendStart={appendStart}
-        appendEnd={appendEnd}
-        popStart={popStart}
-        popEnd={popEnd}
-        clear={clear}
-        reset={reset}
-      />
+      {/* <List1 /> */}
       <List2 />
       {/* Clock */}
       {/* List 1  initialValues [1, 2, 3] */}
