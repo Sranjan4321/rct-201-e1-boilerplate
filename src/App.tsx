@@ -8,7 +8,7 @@ import { Props } from './components/Clock';
 import useNumberList from './hooks/useNumberList';
 function App() {
   let initialvalue: number[] = [1, 2, 3];
-  let date = new Date();
+  let date = new Date().toString();
 
   const { hours, minutes, seconds } = useClock(date);
   return (
